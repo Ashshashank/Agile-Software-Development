@@ -1,0 +1,35 @@
+.bodyT {
+    background-color: beige;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+.bodyF {
+    background-color: beige;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    height: 75vh;
+  }
+
+  .rowT {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 3rem;
+    padding-left: 3rem;
+    padding-right: 5rem;
+  }
+  .undo-btn {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    /* background: #fff; */
+    margin: 1.2rem 0;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 4.5rem;
+  }

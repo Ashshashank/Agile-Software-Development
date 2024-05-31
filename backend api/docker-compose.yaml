@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+
+
+    env_file:
+      - .env
+    environment:
+      MONGODB_HOST: "localhost"
+      MONGODB_PORT: "27017"
+      MONGODB_USERNAME: "FastAPI"
+      MONGODB_PASSWORD: "FooBar"
+      AUTH_SOURCE: "Admin"
+      AUTH_MECHANISM: "SCRAM-SHA-256"
+      AUTH_DB: "Authentication"
+
+      RETRY_WRITES: false
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
